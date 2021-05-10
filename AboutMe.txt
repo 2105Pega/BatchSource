@@ -1,4 +1,4 @@
-First Name:
-Last Name:
-Perferred Name:
-Fav food:
+First Name: James
+Last Name: Bott
+Perferred Name: James
+Fav food: Rice
