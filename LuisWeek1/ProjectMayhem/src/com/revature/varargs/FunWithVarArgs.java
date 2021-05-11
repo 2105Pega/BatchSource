@@ -1,7 +1,7 @@
 package com.revature.varargs;
 
 public class FunWithVarArgs {
-
+	static int p;
 	public static void main(String[] args) {
 		vaTest(1, 2 ,3, 4, 5, 6, 7, 8, 9, 0);
 	}
