@@ -2,8 +2,13 @@ package com.revature.varargs;
 //var arguments can have 0 to infinity inputs for a method.  Can be any type
 
 public class FunWithVarArgs {
+	
+	//static scope
+	static int v;
 
 	public static void main(String[] args) {
+		
+	
 		
 		vaTest(1,2,3,4);
 
