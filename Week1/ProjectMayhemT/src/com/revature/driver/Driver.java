@@ -11,7 +11,7 @@ public class Driver {
 	 * multi line comment
 	 * 
 	 */
-       public static void main(String[] args) {
+     public static void main(String[] args) {
     	   /*Public - accessible by anything
     	    * static - belongs to the class, don't have to instatiate it
     	    * void- doesn't return anything
@@ -26,7 +26,7 @@ public class Driver {
      james.setWeight(30);
      System.out.println(james.getHomePlanet());
      System.out.println(james.getWeight());
-     
+     System.out.println(james);
        }
 
 }

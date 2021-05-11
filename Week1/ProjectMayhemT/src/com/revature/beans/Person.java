@@ -5,7 +5,7 @@ public class Person {
  private int weight;
  private int age;
  static private String homePlanet = "Earth";
- 
+ // Private for class level access only
  public static String getHomePlanet() {
 	return homePlanet;
 }
