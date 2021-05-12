@@ -1,9 +1,11 @@
 package com.revature.beans;
 
 public class Person {
+	//Instance Scope
 	private String name;
 	private int age;
 	private int weight;
+	public int x =7;
 	
 	public static String getHomePlanet() {
 		return homePlanet;

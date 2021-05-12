@@ -32,12 +32,14 @@ public class Driver {
 		System.out.println("Project Mayhem is a go!");
 		
 		Person matt= new Person("matt",35,220);
+		//matt= new Person("tim",3,2);
 		System.out.println(matt.toString());
 		Person james= new Person("James", 300,15);
 		james.setWeight(30);
 		System.out.println(james.getWeight());
 		System.out.println(james.getHomePlanet());
 		System.out.println(matt.getHomePlanet());
+		
 	}
 	/*
 	 * Members of a class- can have different forms
