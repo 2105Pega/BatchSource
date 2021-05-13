@@ -13,5 +13,10 @@ public class Driver {
 		for(int i = 0; i< mine.getLength(); i++) {
 			System.out.println("This index is: " + mine.get(i));
 		}
+		
+		int number = Integer.valueOf("100");
+		String[] s = "  500".split(" ");
+		System.out.println(number);
+		System.out.println(s[2]);
 	}
 }
