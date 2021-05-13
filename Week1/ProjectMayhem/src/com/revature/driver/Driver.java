@@ -14,5 +14,8 @@ public class Driver {
 		Person james = new Person("james", 300, 15);
 		james.setWeight(30);
 		System.out.println(james.getWeight());
+		//final class cannot be extended
+		//final methods cannot be overwritten
+		//final variables cannot be changed once assigned
 	}
 }
