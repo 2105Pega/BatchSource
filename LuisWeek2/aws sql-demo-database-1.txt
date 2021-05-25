@@ -1,0 +1,6 @@
+postgres
+Lpmmim12*
+aws sql-demo-database-1
+
+
+https://www.boraji.com/log4j-2-jdbcappender-example for loggint to a database
