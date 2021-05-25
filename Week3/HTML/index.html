@@ -7,12 +7,20 @@ multi
 line-->
         <head>
             <title>HTML Basics...Roll Tide</title>
+
+            <!-- Setting up internal styling-->
+            <style>
+                body{background-color: crimson;}
+                h2{background-color: darkgray;}
+            </style>
+            <link type="text/css" rel="stylesheet" href="../CSS/style.css"/>
         </head>
 
         <body>
-                <div>
-                    <h1>THIS IS THE BIGGEST</h1>
-                    <h3>This one is ok (h3)</h3>
+                <div class="myClass" id="myID">
+                    <!--Setting up inline styling-->
+                    <h1 style="color:blue" >THIS IS THE BIGGEST</h1>
+                    <h3 id="h3ID">This one is ok (h3)</h3>
                     <p>Thisis used for a whole bunch pf text. <br>lots of good info and things</p>
                 </div>
                 <div>
@@ -53,7 +61,7 @@ line-->
                         <li>The second</li>
                         <li>The thirst</li>
                     </ol>
-                    <h2>Unordered List</h2>
+                    <h1 class="myClass">Unordered List</h1>
                     <ul>
                         <li>This one</li>
                         <li>That one</li>
