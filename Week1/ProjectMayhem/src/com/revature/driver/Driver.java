@@ -34,7 +34,16 @@ public class Driver {
 		
 		kyle.setWeight(180);
 		System.out.println("Kyle now weighs " + kyle.getWeight());
-		System.out.println("Kyle lives on " + kyle.getHomePlanet());
+		System.out.println("Kyle lives on " + Person.getHomePlanet());
 	}
 	
 }
+
+/* To open new repo in workspace:
+ * git init
+ * git remote add origin https://github.com/url_from.git
+ * git add .
+ * git commit -m “First commit”
+ * git push origin
+ */
+

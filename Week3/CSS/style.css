@@ -1,0 +1,35 @@
+body{
+    background-color: goldenrod;
+}
+
+div{
+    background-color: gold;
+}
+
+p{
+    color: darkblue;
+}
+
+hr{
+    background-color: black;
+    color: black;
+    border-color: black;
+}
+
+#title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: goldenrod;
+    background-color: darkblue;
+}
+
+table,td,th{
+    background-color: rgb(197, 149, 28);
+    color: white;
+    border: 1px solid lightgray;
+}
+
+#firstRow{
+    background-color: rgb(161, 123, 24);
+    color: lightgray;
+    font-weight: bold;
+}

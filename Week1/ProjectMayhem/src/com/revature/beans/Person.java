@@ -2,6 +2,7 @@
 package com.revature.beans;
 
 public class Person {
+	// Instance or Object scope
 	private String name;
 	private int age;
 	private int weight;
