@@ -1,0 +1,25 @@
+body {
+    
+    background-color:#004D98;
+    color:#EDBB00;
+}
+a {
+    color:#000000;
+}
+th {
+    color:white;
+}
+td, th {
+    border: 1px solid black;
+}
+
+div {
+    text-align: center;
+    
+}
+footer {
+    text-align: center;
+}
+td{
+    text-align: left;   
+}
