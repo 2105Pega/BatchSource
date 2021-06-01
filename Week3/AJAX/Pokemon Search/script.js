@@ -22,7 +22,7 @@ function searchForPokemonAlternate() {
 
     fetch({
         url: url,
-        method: "GET"
+        method: "GET"  
     }).then( (response) => {
         currentPokemon = JSON.parse(response.body);
         document.querySelector("#pokemon_image").src = currentPokemon.sprites.front_shiny;

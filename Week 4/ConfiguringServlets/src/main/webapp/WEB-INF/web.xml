@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>ConfiguringServlets</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>ContextParam</param-name>
+  	<param-value>Everyone can see this!</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>ConfiguredServlet</servlet-name>
+  	<servlet-class>com.jacob.servlets.ConfiguredServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>ConfiguredParam</param-name>
+  		<param-value>Configured param here!</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>SecondServlet</servlet-name>
+  	<servlet-class>com.jacob.servlets.SecondServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ConfiguredServlet</servlet-name>
+  	<url-pattern>/conf</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>SecondServlet</servlet-name>
+  	<url-pattern>/second</url-pattern>
+  </servlet-mapping>
+</web-app>
