@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>ConfiguringServlets</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>ConfiguredServlet</servlet-name>
+  	<servlet-class>com.kyle.servlets.ConfiguredServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>ConfiguredParam</param-name>
+  		<param-value> Configured parameter value </param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ConfiguredServlet</servlet-name>
+  	<url-pattern>/conf</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>SecondServlet</servlet-name>
+  	<servlet-class>com.kyle.servlets.SecondServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>SecondParam</param-name>
+  		<param-value> Seocnd Configured parameter value </param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>SecondServlet</servlet-name>
+  	<url-pattern>/sec</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>ContextParam</param-name>
+  	<param-value> context parameter value :) </param-value>
+  </context-param>
+  
+</web-app>
