@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>employee login</title>
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+	
+	<div class="login">
+	  <div class="login-triangle"></div>
+	  
+	  <h2 class="login-header">Employee Login</h2>
+	
+	  <form id="myButton" action="employeeHome.html">
+	    <p><input text="user" type="username" placeholder="Username"></p>
+	    <p><input text="pass" type="password" placeholder="Password"></p>
+	    <p><input type="submit" value="Log in"></p>
+	  </form>
+    </div>
+    
+     <script>
+     
+	var request = new Request("http://localhost:8085/Project_1/api/employees");
+	
+	var user = document.getElementById("user").value;
+	var pass = document.getElementById("pass").value;
+	
+	var userdb, passdb;
+
+
+	     
+	     async function getData(){
+		
+		  const response = await fetch(request);
+		  const data = await response.json();
+		//  const {userName,password} = data
+	   //   console.log(userName);
+		  
+	//	  const[empId,firstName,lastName,password,roleId,username] = data
+		  
+		  console.log(data[0].username);
+		  console.log(data[0].password);
+		  
+		  userdb = data[0].username;
+		  passdb = data[0].password;
+	
+		  
+	     }
+	
+	  getData();
+	  
+	     if(userdb == user && passdb == pass){
+	    	   document.getElementById("myButton").onclick = function () {
+	    		   onclick="window.open('employees.html')";
+	    	    };
+	     }
+       
+	  //   employees.html
+	  //class="login-container"
+		
+
+   </script>
+
+</body>
+</html>

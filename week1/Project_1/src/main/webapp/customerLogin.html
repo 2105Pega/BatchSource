@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>customer login</title>
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+	
+	<div class="login">
+	  <div class="login-triangle"></div>
+	  
+	  <h2 class="login-header">Customer Login</h2>
+	
+	  <form class="login-container" action="customerHome.html">
+	    <p><input type="username" placeholder="Username"></p>
+	    <p><input type="password" placeholder="Password"></p>
+	    <p><input type="submit" value="Log in" onClick="redirect();"></p>
+	    
+	  </form>
+    </div>
+    
+     <script>
+     
+	     document.getElementById("myButton").onclick = function () {
+	         location.href = "www.yoursite.com";
+	     };
+       
+		var request = new Request("http://localhost:8085/Project_1/api/employees/employeeList");
+		
+		fetch(request)
+		     .then(
+		        res=>{
+		            res.json().then(
+		                data=>{
+		                    console.log(data);
+		                    if(data.length > 0){
+		                        
+		                        var temp = "";
+		                    data.forEach((itemData) => {
+		                        temp += "<tr>";
+		                        temp += "<td>" + itemData.employees_id + "</td>";
+		                        temp += "<td>" + itemData.firstName + "</td>";
+		                        temp += "<td>" + itemData.lastName + "</td>";
+		                        temp += "<td>" + itemData.password + "</td>";
+		                        temp += "<td>" + itemData.roleId + "</td>";
+		                        temp += "<td>" + itemData.userName + "</td></tr>";
+		                        });
+		                        document.getElementById('data').innerHTML = temp;
+		                        }
+		                }
+		            )
+		        }
+		     )
+
+   </script>
+
+</body>
+</html>

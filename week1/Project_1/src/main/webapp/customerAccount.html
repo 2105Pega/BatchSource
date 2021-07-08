@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Employees</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <div class="header">
+        <a href="#default" class="logo">Revature</a>
+        <div class="header-right">
+          <a class="active" href="home.html">Home</a>
+          <a href="customer.html">Account Information</a>
+          <a href="employees.html">Employee</a>
+          <a href="select.html">Logout</a>
+          
+        </div>
+      </div>
+      
+
+
+
+    
+ <script>
+       
+var Custrequest = new Request("http://localhost:8085/Project_1/api/customers");
+var Accrequest, acc;
+
+
+let id = 120;
+       
+
+		async function getCustomerData(){
+		
+		 const response = await fetch(Custrequest);
+		 const data = await response.json();
+		 
+		 console.log(data[0].customer_id);
+		 console.log(data[1].firstName);
+		 console.log(data[2].lastName);
+		 
+		acc  = new Request("http://localhost:8085/Project_1/api/customers/data[0].customer_id/accounts/data[0].customer_id");
+		 
+		// userdb = data[2].lastName;
+		// passdb = data[0].password;
+		// console.log(userName);
+		 
+		}
+		
+		
+		
+		async function getAccountData(){
+				
+			  const response = await fetch(acc);
+			  const data = await response.json();
+			  
+			  
+			  console.log(data[0].account_id);
+			  console.log(data[1].balance);
+			  
+		}
+		
+		getCustomerData();
+		getAccountData();
+
+
+
+
+   </script> 
+</body>
+
+</html>

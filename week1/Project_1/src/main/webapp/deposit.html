@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+      <div class="header">
+        <a href="#default" class="logo">Revature</a>
+        <div class="header-right">
+          <a class="active" href="home.html">Home</a>
+          <a href="customer.html">Account Information</a>
+          <a href="employees.html">Employee</a>
+       </div>
+
+  <div class="for">
+  
+      <form in="form" method="post">
+    <input type="text" id="account_id" placeholder="account id">
+    <input type="text" id="balance" placeholder="balance">
+    <input type="text" id="customer_id" placeholder="customer id">
+    <input type="submit" value="Create Account">
+  
+  </form>
+  </div>
+
+  <script type="text/javascript">
+   var form =  document.getElementById('form')
+   
+   form.addEventListener("submit", function(e){
+	   e.preventDefault()
+	   
+	   var account = document.getElementById("account_id").value
+	   var bal = document.getElementById("balance").value
+	   var cust_id = document.getElementById("customer_id").value
+	   
+	   
+	   //fetch request
+	   fetch("http://localhost:8085/Project_1/api/customers/{cust_id}/accounts",{
+	        method: 'POST',
+	        body:JSON.stringify({
+	        	account_id:account,
+	        	balance: bal,
+	        	customer_id: cust_id
+	        }),
+	        headers:{
+	        	"Content-Type":"application/json; charset=UTF-8"
+	        }
+	   })
+	   .then(function(response){
+		   return response.json()
+	   })
+	   .then(function(data){
+		   console.log(data)
+	   })
+   })
+  
+  </script>
+</body>
+</html>
